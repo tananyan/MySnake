@@ -1,4 +1,5 @@
 // document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", () => {
   const cvs = document.querySelector("#game"),
     ctx = cvs.getContext("2d");
 
@@ -106,4 +107,4 @@
   }
 
   let startGame = setInterval(toDraw, 100);
-// });
+});
