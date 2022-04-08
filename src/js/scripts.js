@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
   const cvs = document.querySelector("#game"),
     ctx = cvs.getContext("2d");
 
@@ -106,4 +106,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let startGame = setInterval(toDraw, 100);
-});
+// });
