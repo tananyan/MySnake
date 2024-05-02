@@ -8,10 +8,12 @@ window.addEventListener("load", () => {
   groundImg.src = "../img/Background.svg";
 
   const foodImg = new Image();
-  foodImg.src = "../img/Pizza.svg";
+  // foodImg.src = "../img/Pizza.svg";
+  foodImg.src = "../img/333.svg";
 
   const foodBigImg = new Image();
   foodBigImg.src = "../img/Pizzabig.svg";
+  
 
   let box = 25,
     score = 0,
@@ -51,11 +53,11 @@ window.addEventListener("load", () => {
 
   function toDraw() {
     ctx.drawImage(groundImg, 0, 0);
-    ctx.drawImage(foodBigImg, -8, -9);
+    // ctx.drawImage(foodBigImg, -8, -9);
     ctx.drawImage(foodImg, food.x, food.y);
 
     for (let i = 0; i < snake.length; i++) {
-      ctx.fillStyle = i != 0 ? "#007" : "#000";
+      ctx.fillStyle = i != 0 ? "#065c24" : "#013313";
       ctx.fillRect(snake[i].x, snake[i].y, box, box);
     }
 
@@ -84,6 +86,8 @@ window.addEventListener("load", () => {
     ) {
       clearInterval(startGame);
       alert(`Вы слопали пицц: ${score} \nпопробуйте еще раз!`);
+
+      location.reload();
     }
 
     if (dir == "left") {
@@ -106,5 +110,5 @@ window.addEventListener("load", () => {
     snake.unshift(newHead);
   }
 
-  let startGame = setInterval(toDraw, 100);
+  let startGame = setInterval(toDraw, 150);
 });
